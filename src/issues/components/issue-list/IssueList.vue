@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import IssueCard from 'src/issues/components/issue-list/IssueCard.vue';
+import { Issue } from 'src/issues/interfaces/issue';
+
+interface Props {
+  issue: Issue[];
+}
+
+const props = defineProps<Props>();
 </script>
 
 <template>
-  <div v-for="issue of 20" :key="issue" class="row">
-    <IssueCard />
+  <div class="row">
+    <IssueCard v-for="issue of props.issue" :key="issue.id" :issue="issue" />
   </div>
 </template>
 
