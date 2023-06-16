@@ -54,7 +54,11 @@ const { setIssueCacheData } = useIssue(
             {{ 'comments' in issue ? issue.comments : 0 }}
           </q-item-label>
           <q-chip
-            v-if="'state' in issue ? issue.state : 'closed' === State.Closed"
+            v-if="
+              'state' in issue
+                ? issue.state === State.Closed
+                : 'closed' === State.Closed
+            "
             color="positive"
             text-color="white"
             icon="check"

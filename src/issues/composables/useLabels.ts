@@ -5,7 +5,7 @@ import { Label } from 'src/issues/interfaces/labels';
 import { useIssuesStore } from '../../stores/issues';
 
 const getLabels = async (): Promise<Label[]> => {
-  const { data } = await githubApi<Label[]>('labels?per_page=100');
+  const { data } = await githubApi<Label[]>('/labels?per_page=100');
   return data;
 };
 

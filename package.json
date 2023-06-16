@@ -15,8 +15,11 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "@tanstack/vue-query": "^4.29.11",
+    "@types/marked": "^5.0.0",
+    "@vavt/md-editor-extension": "^3.0.0",
     "axios": "^1.4.0",
     "dotenv": "^16.1.4",
+    "md-editor-v3": "^4.1.1",
     "pinia": "^2.0.11",
     "quasar": "^2.6.0",
     "vue": "^3.0.0",
